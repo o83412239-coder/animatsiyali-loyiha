@@ -1,0 +1,92 @@
+body {
+  margin: 0;
+  font-family: Arial;
+  color: white;
+  background: linear-gradient(-45deg, #3b82f6, #9333ea, #06b6d4);
+  background-size: 400% 400%;
+  animation: gradient 10s ease infinite;
+}
+
+/* Gradient animation */
+@keyframes gradient {
+  0% {background-position: 0%}
+  50% {background-position: 100%}
+  100% {background-position: 0%}
+}
+
+/* Header */
+header {
+  text-align: center;
+  padding: 100px 20px;
+}
+
+/* Fade animation */
+.fade {
+  opacity: 0;
+  animation: fadeIn 2s forwards;
+}
+
+@keyframes fadeIn {
+  to {opacity: 1;}
+}
+
+/* Slide animation */
+.slide {
+  transform: translateX(-100px);
+  opacity: 0;
+  animation: slideIn 1s forwards;
+}
+
+@keyframes slideIn {
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Sections */
+section {
+  padding: 50px;
+  text-align: center;
+}
+
+/* Cards */
+.card {
+  background: rgba(255,255,255,0.1);
+  margin: 20px auto;
+  padding: 20px;
+  width: 200px;
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px) scale(1.05);
+}
+
+/* Button */
+button {
+  padding: 12px 30px;
+  border: none;
+  border-radius: 8px;
+  background: white;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button:active {
+  transform: scale(0.9);
+}
+
+/* Scroll animation */
+.box {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: 0.5s;
+}
+
+.box.show {
+  opacity: 1;
+  transform: translateY(0);
+}
